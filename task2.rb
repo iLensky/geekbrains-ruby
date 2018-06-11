@@ -3,7 +3,7 @@
 # SECOND TASK - Максимальная подстрока
 
 def find_str(working_string)
-    for n in (working_string.length).downto(1)
+    for n in (working_string.length).downto(2)
         for m in 0..(working_string.length - n)
             if (working_string.index(working_string[m, n], m + 1) != nil)
                 return working_string[m, n]
@@ -13,7 +13,7 @@ def find_str(working_string)
     return nil
 end
 
-if (ARGV[0] != nil)
+if ((ARGV[0] != nil) && (ARGV[0].length <= 100))
     result = find_str(ARGV[0])
     if (result != nil)
         puts(result)
